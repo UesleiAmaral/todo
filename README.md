@@ -24,12 +24,12 @@ Para instalar o <Todo_App>, siga estas etapas:
 
 Linux e macOS:
 ```
-git clone 
+git clone https://github.com/UesleiAmaral/todo.git
 ```
 
 Windows:
 ```
-git clone 
+git clone https://github.com/UesleiAmaral/todo.git
 ```
 
 ## ☕ Usando <Todo_App>
