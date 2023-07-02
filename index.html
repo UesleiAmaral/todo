@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./assets/style/style.css" />
+
+    <script type="module" src="./src/main.js" defer></script>
+    <title>Frontend Mentor | Todo app</title>
+  </head>
+
+  <body>
+    <img class="img-background img-background-light" src="./assets/images/bg-desktop-light.jpg" alt="" />
+    <img class="img-background img-background-dark display-none" src="./assets/images/bg-desktop-dark.jpg" alt="" />
+
+    <div id="container">
+      <header class="header">
+        <h1 class="h1-title">Todo</h1>
+
+        <figure class="figure-img-dark-mode">
+          <label for="dark-mode">
+            <input type="checkbox" name="dark-mode" id="dark-mode" />
+            <img src="./assets/images/icon-moon.svg" alt="crescent-moon" class="img-moon" />
+            <img src="./assets/images/icon-sun.svg" alt="crescent-sun" class="img-sun display-none" />
+          </label>
+        </figure>
+
+        <section class="section-create-todo">
+          <section class="section-border">
+            <section class="label-check label-check-create display-none">
+              <label for="create-todo">
+                <input type="checkbox" name="create-todo" id="create-todo" />
+                <img src="./assets/images/icon-check.svg" alt="icon check" />
+              </label>
+            </section>
+          </section>
+
+          <input type="text" name="text-todo" id="input-text-todo" placeholder="Create a new todo..." />
+        </section>
+      </header>
+
+      <main class="all-todo-list">
+        <section class="section-todo-list">
+          <section class="section-todo-item">
+            <section class="section-border">
+              <section class="label-check label-check-todo display-none">
+                <label for="item-todo">
+                  <input type="checkbox" name="item-todo" id="item-todo" />
+                  <img src="./assets/images/icon-check.svg" alt="icon check" />
+                </label>
+              </section>
+            </section>
+            <p class="todo-item-text">Isso Não era pra estar aqui!</p>
+
+            <button class="delete-todo-item">
+              <img src="./assets/images/icon-cross.svg" alt="icon cross" />
+            </button>
+          </section>
+        </section>
+
+        <section class="section-info-items">
+          <p class="count-items">5 <span>items left</span></p>
+          <section class="section-mode-view-items section-desktop">
+            <button class="button-view-all-todo">All</button>
+            <button class="button-view-active-todo">Active</button>
+            <button class="button-view-completed-todo">Completed</button>
+          </section>
+          <button class="clear-items-completed">Clear Completed</button>
+        </section>
+      </main>
+
+      <section class="section-mode-view display-none">
+        <button class="button-view-all-todo">All</button>
+        <button class="button-view-active-todo">Active</button>
+        <button class="button-view-completed-todo">Completed</button>
+      </section>
+    </div>
+  </body>
+
+</html>
