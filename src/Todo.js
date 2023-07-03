@@ -58,8 +58,8 @@ export class Todo {
   addAllTodo() {
     this.data.forEach((todo) => {
       const elementTodo = this.createElementTodo(todo.text, todo.id);
-
-      this.select(elementTodo.firstElementChild.children[0].children[0].control);
+      console.log(elementTodo);
+      this.select(elementTodo.firstElementChild.children[0].children[0].firstElementChild);
 
       if (todo.completed) {
         elementTodo.firstElementChild.children[0].classList.toggle("display-none");

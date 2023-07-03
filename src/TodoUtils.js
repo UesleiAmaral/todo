@@ -18,29 +18,7 @@ export class TodoUtils extends Todo{
   };
 
   createTodo(data) {
-    const createTodo = document.querySelector('#create-todo');
-    
-    createTodo.addEventListener('click', () => {
-      if (createTodo.checked) {
-        document.querySelector('.label-check-create').classList.toggle('display-none');
 
-        setTimeout(() => {
-          document.querySelector('.label-check-create').classList.toggle('display-none');
-          createTodo.checked = false;
-          data.value = '';
-        }, 500);
-
-        if (data.value !== '') {
-          this.saveTodo(data.value);
-          this.update();
-          this.countTodoItems();
-          return;
-
-        };
-        alert('Vazio não é uma tarefa!');
-
-      };
-    });
   };
 
   toggleTheme() {
@@ -74,8 +52,8 @@ export class TodoUtils extends Todo{
       this.data.forEach(todo => {
         if (!todo.completed) {
           const elementTodo = this.createElementTodo(todo.text, todo.id);
-
-          this.select(elementTodo.firstElementChild.children[0].children[0].control);
+          
+          this.select(elementTodo.firstElementChild.children[0].children[0].firstElementChild);
           this.delete(elementTodo.lastElementChild, elementTodo.innerText.trim());
           this.root.prepend(elementTodo);
 
@@ -102,7 +80,7 @@ export class TodoUtils extends Todo{
           elementTodo.children[1].classList.toggle("completedTodo");
 
 
-          this.select(elementTodo.firstElementChild.children[0].children[0].control);
+          this.select(elementTodo.firstElementChild.children[0].children[0].firstElementChild);
           this.delete(elementTodo.lastElementChild, elementTodo.innerText.trim());
           this.root.prepend(elementTodo);
 
